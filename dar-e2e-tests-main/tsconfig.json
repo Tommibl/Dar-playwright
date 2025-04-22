@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+    "paths": {
+      "Page/*": ["Page/*"],
+      "Files/*": ["Files/*"]
+    },
+      "allowImportingTsExtensions": true,
+      "target": "ESNext",
+      "types": ["@playwright/test"],
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "dist"
+    },
+    "include": [
+      "tests/**/*.ts",  // Включаем все тесты
+      "tests/Login.ts",
+      "Page/ChatPage.ts"
+    ]
+  }
+  
