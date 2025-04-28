@@ -49,6 +49,18 @@ test.describe('Mention', () => {
     await expect(mentionKamalInHistory).toBeVisible();
     await mensionPage.deleteMessage(mentionKamalInHistory);
   });
+  test('Send one mention2', async () => {
+    await mensionPage.sendMention('@KamalAbdin', selectors.chooseKamalMention);
+    const mentionKamalInHistory = await page.locator(selectors.mentionKamalInHistory).nth(0);
+    await expect(mentionKamalInHistory).toBeVisible();
+    await mensionPage.deleteMessage(mentionKamalInHistory);
+  });
+  test('Send one mention3', async () => {
+    await mensionPage.sendMention('@KamalAbdin', selectors.chooseKamalMention);
+    const mentionKamalInHistory = await page.locator(selectors.mentionKamalInHistory).nth(0);
+    await expect(mentionKamalInHistory).toBeVisible();
+    await mensionPage.deleteMessage(mentionKamalInHistory);
+  });
 
   test('Send two mentions', async () => {
     await mensionPage.sendTwoMentions('@KamalAbdin', selectors.chooseKamalMention, ' @DauletTokmukhanbet', selectors.chooseDauletMention);
